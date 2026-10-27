@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Ariq Alfalah</title>
+    <title>Ariq Alfalah | Data Analytics, Business Intelligence & AI Solutions</title>
+
+    <!-- SEO & Metadata -->
+    <meta
+      name="description"
+      content="Portofolio resmi Ariq Alfalah — Pengembang solusi berbasis data dan AI yang menggabungkan analitik data, visualisasi interaktif, dan integrasi API untuk menyelesaikan masalah praktis."
+    />
+    <meta name="author" content="Ariq Alfalah" />
+
+    <!-- Open Graph Metadata untuk Preview Tautan Sosial -->
+    <meta property="og:title" content="Ariq Alfalah | Building Data-Driven Applications with AI" />
+    <meta
+      property="og:description"
+      content="Portofolio Data Analytics, Business Intelligence, dan AI Application Development."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ariq04.github.io/web-portofolio/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="foto1.jpeg" />
 
     <!-- Link ke File CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Link ke Font Awesome untuk Ikon -->
+    <!-- Font Awesome untuk Ikonografi -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,244 +36,808 @@
   <body>
     <!-- Header & Navigasi -->
     <header class="header">
-      <a href="#home" class="logo">Portofolio.</a>
-      <nav class="navbar">
-        <a href="#home" class="active">Beranda</a>
-        <a href="#about">Tentang Saya</a>
-        <a href="#projects">Proyek</a>
-        <a href="#certificate">Sertifikat</a>
-        <a href="#contact">Kontak</a>
+      <a href="#home" class="logo">Ariq<span>.</span></a>
+      <nav class="navbar" id="navbar" aria-label="Navigasi Utama">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="fas fa-bars" id="menu-icon"></div>
+      <div
+        class="fas fa-bars"
+        id="menu-icon"
+        aria-label="Toggle menu navigasi"
+        aria-expanded="false"
+        aria-controls="navbar"
+        role="button"
+        tabindex="0"
+      ></div>
     </header>
 
-    <!-- Bagian Beranda (Home) -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Halo, Saya</h3>
-        <h1>ARIQ ALFALAH</h1>
-        <h3>Dan saya seorang <span class="typewriter"></span></h3>
-        <p class="reveal">
-          Selamat datang di portofolio saya. Saya bersemangat dalam menciptakan
-          solusi digital yang modern dan fungsional. Mari lihat karya-karya
-          saya!
+    <!-- Konten Utama (Semantic Main) -->
+    <main id="main-content">
+      <!-- 1. Hero / Home Section -->
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Halo, Saya</h3>
+          <h1>ARIQ ALFALAH</h1>
+          <h3>Building Data-Driven Applications with AI.</h3>
+          <p>
+            I build data-driven applications and AI-powered solutions that turn complex processes
+            into practical digital experiences. Fokus pada pemrosesan data analitik, dashboard
+            Business Intelligence, dan integrasi model AI untuk menyelesaikan masalah nyata.
+          </p>
+
+          <!-- Tautan Media Sosial Profesional -->
+          <div class="social-media">
+            <a
+              href="https://wa.me/6287887144617"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat WhatsApp Ariq Alfalah"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ariq-alfalah-483477347/?isSelfProfile=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Profil LinkedIn Ariq Alfalah"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/Ariq04"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Profil GitHub Ariq Alfalah"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <!-- CTA Group: View Projects & Lihat CV -->
+          <div class="btn-group">
+            <a href="#projects" class="btn">
+              <i class="fas fa-laptop-code"></i> View Projects
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1pU89RBoRMsqLm5zRcx9GFymJ5Hu4fiHZ/view?usp=sharing"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lihat CV Ariq Alfalah di Google Drive"
+            >
+              <i class="fas fa-eye"></i> Lihat CV
+            </a>
+          </div>
+        </div>
+
+        <div class="home-img">
+          <img
+            src="foto1.jpeg"
+            alt="Foto Profil Ariq Alfalah"
+            width="380"
+            height="380"
+          />
+        </div>
+      </section>
+
+      <!-- 2. About Section -->
+      <section class="about" id="about">
+        <div class="about-img reveal">
+          <img
+            src="foto2.jpeg"
+            alt="Ariq Alfalah — Profil Profesional"
+            width="400"
+            height="400"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-content reveal">
+          <h2 class="heading">Tentang <span>Saya</span></h2>
+          <h3>Data Analyst, AI Developer & Founder of A.A.Store</h3>
+          <p>
+            Saya adalah lulusan Sarjana (S1) Sistem Informasi dari Universitas Nurdin Hamzah dengan
+            predikat kelulusan sempurna (<strong>IPK 4.00</strong>). Berfokus pada
+            <strong>Data Analytics</strong>, <strong>Business Intelligence</strong>, dan
+            <strong>AI Application Development</strong>, saya berpengalaman selama lebih dari 2 tahun
+            sebagai Asisten Laboratorium Komputer dan aktif mengembangkan aplikasi berbasis data
+            menggunakan Python, SQL, Power BI, Streamlit, dan ekosistem modern web.
+          </p>
+          <p>
+            Selain dedikasi akademik dan riset AI, saya juga merupakan pemilik dan pengembang
+            <a href="https://shopee.co.id/shop/1145555979" target="_blank" rel="noopener noreferrer" style="color: var(--main-color); text-decoration: underline;"><strong>A.A.Store</strong></a> di Shopee — mengelola penjualan aplikasi premium berlisensi
+            serta menyediakan jasa kustom pembuatan aplikasi web dan solusi kecerdasan buatan (AI)
+            untuk membantu operasional bisnis dan kebutuhan klien.
+          </p>
+
+          <!-- Tautan Profil Profesional (WhatsApp, Shopee, GitHub & LinkedIn) -->
+          <div class="about-social">
+            <a
+              href="https://shopee.co.id/shop/1145555979"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-pill"
+              aria-label="Kunjungi Toko Shopee A.A.Store"
+            >
+              <i class="fas fa-bag-shopping" style="color: #ee4d2d;"></i>
+              <span>A.A.Store / Shopee</span>
+            </a>
+            <a
+              href="https://wa.me/6287887144617"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-pill"
+              aria-label="Hubungi WhatsApp Ariq Alfalah"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp / 0878-8714-4617</span>
+            </a>
+            <a
+              href="https://github.com/Ariq04"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-pill"
+              aria-label="Kunjungi Profil GitHub Ariq Alfalah"
+            >
+              <i class="fab fa-github"></i>
+              <span>GitHub / Ariq04</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ariq-alfalah-483477347/?isSelfProfile=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-pill"
+              aria-label="Kunjungi Profil LinkedIn Ariq Alfalah"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn / Ariq Alfalah</span>
+            </a>
+          </div>
+
+          <div class="btn-group">
+            <a href="#experience" class="btn btn-sm">Lihat Pengalaman</a>
+            <a href="#contact" class="btn-outline btn-sm">Hubungi Saya</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Featured Projects Section -->
+      <section class="projects" id="projects">
+        <h2 class="heading reveal">Featured <span>Projects</span></h2>
+        <p class="section-desc reveal">
+          Studi kasus proyek analitik data, visualisasi Business Intelligence, dan pengembangan
+          aplikasi yang dibangun berdasarkan kebutuhan praktis.
         </p>
-        <div class="social-media">
-          <a href="www.linkedin.com/in/ariq-alfalah-483477347"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://github.com/Ariq04"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/ariqalflah/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-        <a href="#about" class="btn reveal">Selengkapnya Tentang Saya</a>
-      </div>
-      <div class="home-img reveal">
-        <img src="foto1.jpeg" alt="Foto Profil Anda" />
-      </div>
-    </section>
 
-    <!-- Bagian Tentang Saya (About) -->
-    <section class="about" id="about">
-      <div class="about-img reveal">
-        <img src="foto2.jpeg" alt="Foto Tentang Saya" />
-      </div>
-      <div class="about-content reveal">
-        <h2 class="heading">Tentang <span>Saya</span></h2>
-        <h3>Seorang Data Analyst dan Data Science</h3>
-        <p>
-          Saya adalah seorang Data Analyst dengan latar belakang di bidang
-          Sistem Informasi dan pengalaman dalam mengelola serta menganalisis
-          data menggunakan Python, SQL, dan Power BI. Saya memiliki keahlian
-          dalam membersihkan data, melakukan eksplorasi, serta menyajikan
-          insight melalui visualisasi interaktif. Saya juga tertarik pada
-          pemanfaatan teknologi terkini seperti Generative AI untuk mendukung
-          pengambilan keputusan berbasis data. Tujuan saya adalah membantu
-          organisasi memahami data mereka dan mengubahnya menjadi strategi yang
-          berdampak.
+        <div class="projects-container">
+          <!-- Proyek 1: VORIX — Vision On-Chain AI Agent -->
+          <div class="project-card reveal">
+            <div class="project-card-img">
+              <a
+                href="https://projek-vorix.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kunjungi Web App VORIX Vision On-Chain AI"
+              >
+                <img
+                  src="Screenshot 2026-10-26 220525.png"
+                  alt="Dashboard Screener AI dan Radar Otonom VORIX"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div class="project-card-body">
+              <div class="badge-group">
+                <span class="badge"><i class="fas fa-robot"></i> AI Agent</span>
+                <span class="badge"><i class="fas fa-bolt"></i> Gemini Flash</span>
+                <span class="badge"><i class="fas fa-link"></i> Web3 / BSC</span>
+                <span class="badge"><i class="fas fa-chart-line"></i> Market Radar</span>
+              </div>
+              <h3 class="project-card-title">VORIX — Vision On-Chain AI Agent</h3>
+              <p class="project-card-desc">
+                Platform autonomous AI agent & radar pasar crypto cerdas yang memindai indikator
+                teknikal (RSI & Fibonacci Support) dari 200+ pair pasar secara real-time, dilengkapi
+                terminal eksekusi otomatis di BSC Testnet dengan Gemini Flash Reasoning Engine.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="https://projek-vorix.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm"
+                >
+                  <i class="fas fa-arrow-up-right-from-square"></i> Buka Web App
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 2: English Self-Assessment Platform -->
+          <div class="project-card reveal">
+            <div class="project-card-img">
+              <a
+                href="https://english-self-assessment-production.up.railway.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kunjungi Web Platform English Self-Assessment"
+              >
+                <img
+                  src="Screenshot 2026-10-26 220627.png"
+                  alt="Platform English Self-Assessment & Pelatihan TOEFL"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div class="project-card-body">
+              <div class="badge-group">
+                <span class="badge"><i class="fab fa-python"></i> Python</span>
+                <span class="badge"><i class="fas fa-graduation-cap"></i> TOEFL Prep</span>
+                <span class="badge"><i class="fas fa-spell-check"></i> Assessment Engine</span>
+                <span class="badge"><i class="fas fa-chart-column"></i> Analytics</span>
+              </div>
+              <h3 class="project-card-title">English Self-Assessment Platform (TOEFL Prep)</h3>
+              <p class="project-card-desc">
+                Aplikasi web interaktif berbasis riset untuk mengukur dan merefleksikan kompetensi
+                bahasa Inggris mandiri (Grammar Mastery, Reading Comprehension, dan Listening
+                Comprehension) dengan evaluasi skor komprehensif dan histori performa real-time.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="https://english-self-assessment-production.up.railway.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm"
+                >
+                  <i class="fas fa-arrow-up-right-from-square"></i> Buka Web App
+                </a>
+                <a
+                  href="https://github.com/Ariq04/english-self-assessment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline btn-sm"
+                >
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 3: Integrated Analytics Dashboard with AI Assistant -->
+          <div class="project-card reveal">
+            <div class="project-card-img">
+              <a
+                href="https://drive.google.com/file/d/1VktMbPas-OBKv5RrxArRUCx9DMI28WpW/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lihat Dokumentasi Lengkap Aplikasi (PDF di Google Drive)"
+              >
+                <img
+                  src="Screenshot 2026-10-26 220840.png"
+                  alt="Executive Dashboard Monitoring Bisnis Klinik Pratama berbasis Streamlit dan AI Assistant"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div class="project-card-body">
+              <div class="badge-group">
+                <span class="badge"><i class="fab fa-python"></i> Python</span>
+                <span class="badge"><i class="fas fa-cubes"></i> Streamlit</span>
+                <span class="badge"><i class="fas fa-database"></i> SQLite</span>
+                <span class="badge"><i class="fas fa-brain"></i> AI Assistant</span>
+              </div>
+              <h3 class="project-card-title">Integrated Analytics Dashboard with AI Assistant</h3>
+              <p class="project-card-desc">
+                Executive Dashboard monitoring kinerja bisnis & operasional Klinik Pratama
+                (pendapatan Rp 3.68M, 4.264 pasien). Terintegrasi dengan asisten AI berbasis LLM untuk
+                menganalisis kueri insight data menggunakan bahasa alami secara real-time.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="https://drive.google.com/file/d/1VktMbPas-OBKv5RrxArRUCx9DMI28WpW/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm"
+                >
+                  <i class="fas fa-file-pdf"></i> Lihat Full Preview (PDF)
+                </a>
+                <a
+                  href="https://github.com/Ariq04/Dashboard-Analitik-Terintegrasi-AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline btn-sm"
+                >
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 4: Global Superstore Analytics -->
+          <div class="project-card reveal">
+            <div class="project-card-img">
+              <img
+                src="foto3.png"
+                alt="Dashboard Power BI Global Superstore Analytics"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card-body">
+              <div class="badge-group">
+                <span class="badge"><i class="fas fa-chart-pie"></i> Power BI</span>
+                <span class="badge"><i class="fas fa-calculator"></i> DAX</span>
+                <span class="badge"><i class="fas fa-magnifying-glass-chart"></i> EDA</span>
+                <span class="badge"><i class="fas fa-store"></i> Retail KPI</span>
+              </div>
+              <h3 class="project-card-title">Global Superstore Analytics Dashboard</h3>
+              <p class="project-card-desc">
+                Dashboard analitik komprehensif untuk memantau performa penjualan ritel global
+                ($12.64M sales, $1.47M profit), segmentasi pelanggan korporat vs individual,
+                analisis profit regional, dan efisiensi logistik pengiriman barang.
+              </p>
+              <div class="btn-group">
+                <a href="#projects" class="btn-outline btn-sm">
+                  <i class="fas fa-chart-pie"></i> Power BI Report
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 5: PMB Analytics Dashboard UNH -->
+          <div class="project-card reveal">
+            <div class="project-card-img">
+              <img
+                src="foto4.png"
+                alt="Dashboard Penerimaan Mahasiswa Baru Universitas Nurdin Hamzah"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card-body">
+              <div class="badge-group">
+                <span class="badge"><i class="fas fa-chart-pie"></i> Power BI</span>
+                <span class="badge"><i class="fas fa-chart-line"></i> Data Analysis</span>
+                <span class="badge"><i class="fas fa-university"></i> Higher Education</span>
+              </div>
+              <h3 class="project-card-title">Dashboard PMB Universitas Nurdin Hamzah</h3>
+              <p class="project-card-desc">
+                Visualisasi data pendaftaran mahasiswa baru (1.022 pendaftar) yang menyajikan
+                insight mengenai tren pendaftaran tahunan, sebaran geografis asal sekolah, jalur
+                seleksi, serta efektivitas saluran promosi kampus.
+              </p>
+              <div class="btn-group">
+                <a href="#projects" class="btn-outline btn-sm">
+                  <i class="fas fa-university"></i> Institutional BI
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Skills Section -->
+      <section class="skills" id="skills">
+        <h2 class="heading reveal">Technical <span>Skills</span></h2>
+        <p class="section-desc reveal">
+          Keahlian teknis yang telah diterapkan dalam studi kasus, proyek nyata, sertifikasi resmi,
+          dan operasional laboratorium komputer.
         </p>
-        <a href="#projects" class="btn">Lihat Proyek Saya</a>
-      </div>
-    </section>
 
-    <!-- Bagian Proyek (Projects) -->
-    <section class="projects" id="projects">
-      <h2 class="heading reveal">Proyek <span>Terbaru</span></h2>
-      <div class="projects-container">
-        <div class="project-box reveal">
-          <img src="foto3.png" alt="Gambar Proyek 1" />
-          <div class="project-layer">
-            <h4>Dashboard Analyst</h4>
-            <p>Membuat Dashboard Analyst Pada Global Super Store.</p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        <div class="skills-container">
+          <!-- Kategori 1: Programming -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <i class="fas fa-code skill-category-icon"></i>
+              <h3 class="skill-category-title">Programming</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+              <span class="skill-item"><i class="fab fa-php"></i> PHP</span>
+              <span class="skill-item"><i class="fab fa-laravel"></i> Laravel</span>
+              <span class="skill-item"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+              <span class="skill-item"><i class="fab fa-react"></i> React.js</span>
+              <span class="skill-item"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="skill-item"><i class="fas fa-database"></i> SQL</span>
+              <span class="skill-item"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+            </div>
           </div>
-        </div>
-        <div class="project-box reveal">
-          <img src="foto4.png" alt="Gambar Proyek 2" />
-          <div class="project-layer">
-            <h4>Dashboard Analyst</h4>
-            <p>Membuat Dashboard Analyst Pada Universitas Nurdin Hamzah</p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="project-box reveal">
-          <img src="foto5.png" alt="Gambar Proyek 3" />
-          <div class="project-layer">
-            <h4>Sistem Gaji</h4>
-            <p>Situs web untuk mengolah sistem gaji Karyawan.</p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Bagian Sertifikat (Telah Diperbarui) -->
-    <section class="certificate" id="certificate">
-      <h2 class="heading reveal">Sertifikat & <span>Pencapaian</span></h2>
-      <div class="certificate-container">
-        <!-- Ganti src dengan path gambar sertifikat Anda -->
-        <div class="certificate-box reveal">
-          <img src="foto6.png" alt="Sertifikat IBM SkillsBuild" />
-          <div class="certificate-layer">
-            <h4>Sertifikasi IBM</h4>
-            <p>Klik untuk melihat</p>
+          <!-- Kategori 2: Data Analysis -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <i class="fas fa-chart-line skill-category-icon"></i>
+              <h3 class="skill-category-title">Data Analysis</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item"><i class="fas fa-table"></i> Pandas</span>
+              <span class="skill-item"><i class="fas fa-calculator"></i> NumPy</span>
+              <span class="skill-item"><i class="fas fa-filter"></i> Data Cleaning</span>
+              <span class="skill-item"><i class="fas fa-magnifying-glass-chart"></i> EDA</span>
+              <span class="skill-item"><i class="fas fa-square-root-variable"></i> Statistics</span>
+            </div>
+          </div>
+
+          <!-- Kategori 3: BI & Visualization -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <i class="fas fa-chart-pie skill-category-icon"></i>
+              <h3 class="skill-category-title">BI & Visualization</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item"><i class="fas fa-chart-pie"></i> Power BI</span>
+              <span class="skill-item"><i class="fas fa-cubes"></i> Streamlit</span>
+              <span class="skill-item"><i class="fas fa-calculator"></i> DAX</span>
+              <span class="skill-item"><i class="fas fa-gauge"></i> Interactive Dashboards</span>
+              <span class="skill-item"><i class="fas fa-book-open"></i> Data Storytelling</span>
+            </div>
+          </div>
+
+          <!-- Kategori 4: Database -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <i class="fas fa-database skill-category-icon"></i>
+              <h3 class="skill-category-title">Database</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item"><i class="fas fa-server"></i> MySQL</span>
+              <span class="skill-item"><i class="fas fa-file-lines"></i> SQLite</span>
+              <span class="skill-item"><i class="fas fa-network-wired"></i> SQLAlchemy</span>
+              <span class="skill-item"><i class="fas fa-sitemap"></i> Relational Design</span>
+            </div>
+          </div>
+
+          <!-- Kategori 5: AI & Integration -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <i class="fas fa-brain skill-category-icon"></i>
+              <h3 class="skill-category-title">AI & Integration</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item"><i class="fas fa-wand-magic-sparkles"></i> Generative AI</span>
+              <span class="skill-item"><i class="fas fa-microchip"></i> LLM API</span>
+              <span class="skill-item"><i class="fas fa-terminal"></i> Prompt Engineering</span>
+              <span class="skill-item"><i class="fas fa-robot"></i> IBM Granite</span>
+              <span class="skill-item"><i class="fas fa-gears"></i> AI Workflows</span>
+            </div>
           </div>
         </div>
-        <div class="certificate-box reveal">
-          <img src="foto7.png" alt="Sertifikat 2" />
-          <div class="certificate-layer">
-            <h4>Sertifikat IBM</h4>
-            <p>Klik untuk melihat</p>
+      </section>
+
+      <!-- 5. Experience & Credentials Section -->
+      <section class="experience" id="experience">
+        <h2 class="heading reveal">Experience & <span>Credentials</span></h2>
+        <p class="section-desc reveal">
+          Rekam jejak pengalaman profesional, kontribusi akademik, pendidikan, dan sertifikasi resmi
+          yang terverifikasi.
+        </p>
+
+        <!-- Timeline Pengalaman & Kontribusi Akademik -->
+        <div class="timeline reveal">
+          <!-- Item 1: Founder & Software Developer A.A.Store -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 — Sekarang</span>
+              <h3 class="timeline-title">Founder & Software Developer</h3>
+              <h4 class="timeline-subtitle">A.A.Store (Shopee E-Commerce & Jasa Web/AI)</h4>
+              <p class="timeline-desc">
+                Membangun dan mengelola toko digital di Shopee yang berfokus pada penyediaan lisensi aplikasi premium serta jasa kustom pembuatan aplikasi web dan integrasi model kecerdasan buatan (AI) untuk berbagai kebutuhan klien.
+              </p>
+              <div style="margin-top: 1.5rem;">
+                <a
+                  href="https://shopee.co.id/shop/1145555979"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline btn-sm"
+                  aria-label="Kunjungi Toko Shopee A.A.Store"
+                >
+                  <i class="fas fa-bag-shopping" style="color: #ee4d2d;"></i> Kunjungi Toko Shopee <i class="fas fa-arrow-up-right-from-square" style="font-size: 1.1rem; margin-left: 0.4rem;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Asisten Lab Komputer -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Juli 2024 — Agustus 2026 (2 Tahun 1 Bulan)</span>
+              <h3 class="timeline-title">Asisten Laboratorium Komputer</h3>
+              <h4 class="timeline-subtitle">LPTIK Universitas Nurdin Hamzah — Jambi</h4>
+              <p class="timeline-desc">
+                Bertanggung jawab dalam pengelolaan operasional laboratorium komputer, mendampingi
+                praktikum mahasiswa di bidang teknologi informasi dan komputasi, serta melakukan
+                pemeliharaan perangkat dan infrastruktur laboratorium.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Presenter Konferensi Internasional -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">9 September 2026</span>
+              <h3 class="timeline-title">Presenter Konferensi Internasional (The 1st JICEDHUM)</h3>
+              <h4 class="timeline-subtitle">FKIP Universitas Jambi</h4>
+              <p class="timeline-desc">
+                Mempresentasikan riset ilmiah berjudul <em>"Extending the Technology Acceptance Model with Trust in AI: A PLS-SEM Study on Indonesian University Students"</em> pada The 1st Jambi International Conference on Education and Humanities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Pendidikan Formal (Lulus IPK 4.00) -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — 2026 (Lulus)</span>
+              <h3 class="timeline-title">S1 Sistem Informasi (IPK: 4.00 / 4.00)</h3>
+              <h4 class="timeline-subtitle">Universitas Nurdin Hamzah — Predikat Kelulusan Sempurna</h4>
+              <p class="timeline-desc">
+                Menyelesaikan studi sarjana Sistem Informasi dengan Indeks Prestasi Kumulatif sempurna (IPK 4.00). Mendalami analitika data, Business Intelligence, perancangan sistem informasi bisnis, rekayasa basis data, dan integrasi kecerdasan buatan dalam pemecahan masalah organisasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: Kepemimpinan & Pengabdian -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 — 2025</span>
+              <h3 class="timeline-title">Kepemimpinan Organisasi & Kepanitiaan Teknis</h3>
+              <h4 class="timeline-subtitle">HIMASIF UNH & Diskominfo Muaro Jambi</h4>
+              <p class="timeline-desc">
+                Menjabat sebagai <strong>Ketua Pelaksana PHP 2025</strong> (Pesta Harmoni, Pembelajaran, dan Pengenalan) HIMASIF UNH serta berkontribusi sebagai <strong>Panitia Teknis Bimtek Aplikasi Layanan Publik</strong> kerja sama Diskominfo Muaro Jambi dan UNH.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="certificate-box reveal">
-          <img src="foto8.png" alt="Sertifikat 3" />
-          <div class="certificate-layer">
-            <h4>Sertifikat IBM</h4>
-            <p>Klik untuk melihat</p>
+
+        <!-- Subheading Galeri Sertifikat -->
+        <h3 class="subheading-credentials reveal">Sertifikasi & <span>Kredensial Resmi</span></h3>
+        <p class="section-desc reveal">
+          Klik setiap kartu sertifikat di bawah ini untuk melihat bukti sertifikat resmi ukuran penuh.
+        </p>
+
+        <!-- Grid Galeri Sertifikat Terverifikasi -->
+        <div class="certificate-container">
+          <!-- 1. RevoU Kampus Merdeka Data Analytics & Gen AI -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat RevoU Tech Academy Data Analytics and Gen AI">
+            <img src="foto13.png" alt="Sertifikat RevoU Tech Academy - Data Analytics and Gen AI (Grade 94/100)" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>RevoU Tech Academy</h4>
+              <p>Data Analytics & Gen AI (Grade 94/100 [A])</p>
+            </div>
+          </div>
+
+          <!-- 2. Komdigi Digitalent Fundamental Data Science -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Komdigi Digitalent Fundamental Data Science">
+            <img src="foto9.png" alt="Sertifikat Pelatihan Komdigi Digitalent - Fundamental Data Science" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Komdigi Digitalent FGA</h4>
+              <p>Fundamental Data Science (2025)</p>
+            </div>
+          </div>
+
+          <!-- 3. IBM SkillsBuild x Hacktiv8 -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat IBM SkillsBuild Hacktiv8 Data Classification and Summarization">
+            <img src="foto19.png" alt="Sertifikat Hacktiv8 x IBM SkillsBuild - Data Classification and Summarization" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>IBM SkillsBuild x Hacktiv8</h4>
+              <p>Student Developer Initiative (2025)</p>
+            </div>
+          </div>
+
+          <!-- 4. IBM Granite MDL-563 -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat IBM SkillsBuild Classifying Data Using IBM Granite">
+            <img src="foto6.png" alt="Sertifikat IBM SkillsBuild - Classifying Data Using IBM Granite" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>IBM SkillsBuild</h4>
+              <p>Classifying Data Using IBM Granite</p>
+            </div>
+          </div>
+
+          <!-- 5. IBM Granite MDL-564 -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat IBM SkillsBuild Summarizing Data Using IBM Granite">
+            <img src="foto7.png" alt="Sertifikat IBM SkillsBuild - Summarizing Data Using IBM Granite" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>IBM SkillsBuild</h4>
+              <p>Summarizing Data Using IBM Granite</p>
+            </div>
+          </div>
+
+          <!-- 6. IBM Granite MDL-565 -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat IBM SkillsBuild Data Classification & Summarization">
+            <img src="foto8.png" alt="Sertifikat IBM SkillsBuild - Data Classification and Summarization Using IBM Granite" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>IBM SkillsBuild</h4>
+              <p>Data Classification & Summarization</p>
+            </div>
+          </div>
+
+          <!-- 7. Komdigi Wawasan Karir Data Analytics -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Komdigi Wawasan Karir Data Analytics">
+            <img src="foto10.png" alt="Sertifikat Pelatihan Komdigi - Wawasan Karir dalam Bidang Data Analytics" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Komdigi Digitalent</h4>
+              <p>Wawasan Karir Data Analytics</p>
+            </div>
+          </div>
+
+          <!-- 8. Komdigi Pengenalan Data Science -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Komdigi Pengenalan Data Science">
+            <img src="foto11.png" alt="Sertifikat Pelatihan Komdigi - Pengenalan Data Science" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Komdigi Digitalent</h4>
+              <p>Pengenalan Data Science</p>
+            </div>
+          </div>
+
+          <!-- 9. Indonesia Web3 Hackathon 2026 (AI x Web3) -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Indonesia Web3 Hackathon 2026 Workshop">
+            <img src="Screenshot 2026-10-26 160932.png" alt="Sertifikat Indonesia Web3 Hackathon 2026 Online Workshop AI x Web3" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Binance Academy x BNB Chain</h4>
+              <p>Indonesia Web3 Hackathon Workshop (2026)</p>
+            </div>
+          </div>
+
+          <!-- 10. Asisten Laboratorium UNH -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Penghargaan Asisten Laboratorium UNH">
+            <img src="Screenshot 2026-10-26 160721.png" alt="Sertifikat Penghargaan Asisten Laboratorium Universitas Nurdin Hamzah" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>LPTIK Univ. Nurdin Hamzah</h4>
+              <p>Asisten Laboratorium Komputer (2024-2026)</p>
+            </div>
+          </div>
+
+          <!-- 11. Presenter Konferensi Internasional JICEDHUM -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Presenter Konferensi Internasional JICEDHUM">
+            <img src="Screenshot 2026-10-26 161130.png" alt="Certificate of Appreciation Presenter AI Research - JICEDHUM 2026" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>The 1st JICEDHUM (UNJA)</h4>
+              <p>Presenter Riset Kepercayaan AI (2026)</p>
+            </div>
+          </div>
+
+          <!-- 12. Kepesertaan MSIB Kampus Merdeka -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Kepesertaan MSIB Kampus Merdeka di RevoU">
+            <img src="foto12.png" alt="Sertifikat Kepesertaan Studi Independen Kampus Merdeka di RevoU" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Kampus Merdeka SIB</h4>
+              <p>Kepesertaan di RevoU (Angkatan 7)</p>
+            </div>
+          </div>
+
+          <!-- 13. Edspert.id Web Development -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Bootcamp Web Development Edspert.id">
+            <img src="foto15.png" alt="Sertifikat Mini Bootcamp Web Development - Edspert.id" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Edspert.id</h4>
+              <p>Web Development for Beginner (2024)</p>
+            </div>
+          </div>
+
+          <!-- 14. Edspert.id Introduction to IoT -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Bootcamp Introduction to IoT Edspert.id">
+            <img src="foto16.png" alt="Sertifikat Mini Bootcamp Introduction to IoT - Edspert.id" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Edspert.id</h4>
+              <p>Introduction to IoT (2024)</p>
+            </div>
+          </div>
+
+          <!-- 15. Ketua Pelaksana PHP 2025 HIMASIF UNH -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Ketua Pelaksana PHP 2025 HIMASIF UNH">
+            <img src="foto17.jpeg" alt="Sertifikat Ketua Pelaksana PHP 2025 HIMASIF Universitas Nurdin Hamzah" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>HIMASIF UNH</h4>
+              <p>Ketua Pelaksana PHP 2025 (Januari 2025)</p>
+            </div>
+          </div>
+
+          <!-- 16. Panitia Bimtek Diskominfo Muaro Jambi -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Sertifikat Panitia Bimtek Aplikasi Diskominfo Muaro Jambi">
+            <img src="foto18.png" alt="Sertifikat Panitia Bimtek Layanan Publik Diskominfo Muaro Jambi & UNH" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>Diskominfo Muaro Jambi</h4>
+              <p>Panitia Bimtek Aplikasi Layanan Publik</p>
+            </div>
+          </div>
+
+          <!-- 17. SMAN 1 Muaro Jambi MPK -->
+          <div class="certificate-box reveal" tabindex="0" role="button" aria-label="Piagam Penghargaan MPK SMAN 1 Muaro Jambi">
+            <img src="foto14.png" alt="Piagam Penghargaan Ketua Komisi C MPK SMAN 1 Muaro Jambi" loading="lazy" />
+            <div class="certificate-layer">
+              <h4>SMAN 1 Muaro Jambi</h4>
+              <p>Ketua Komisi C MPK (2020/2021)</p>
+            </div>
           </div>
         </div>
-        <div class="certificate-box reveal">
-          <img src="foto9.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Komdigi</h4>
-            <p>Klik untuk melihat</p>
+      </section>
+
+      <!-- 6. Contact Section -->
+      <section class="contact" id="contact">
+        <h2 class="heading reveal">Hubungi <span>Saya</span></h2>
+        <div class="contact-content reveal">
+          <p>
+            Tertarik untuk berkolaborasi, mendiskusikan peluang kerja di bidang Data Analytics / BI,
+            maupun pengembangan solusi berbasis kecerdasan buatan? Silakan hubungi saya melalui email
+            atau jejaring profesional di bawah ini:
+          </p>
+          <p class="email">
+            <strong>Email:</strong>
+            <a href="mailto:ariqalfalah04@gmail.com">ariqalfalah04@gmail.com</a>
+          </p>
+          <p class="whatsapp">
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/6287887144617" target="_blank" rel="noopener noreferrer">+62 878-8714-4617</a>
+          </p>
+          <div class="social-media">
+            <a
+              href="https://wa.me/6287887144617"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat WhatsApp Ariq Alfalah"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ariq-alfalah-483477347/?isSelfProfile=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Ariq Alfalah"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/Ariq04"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Ariq Alfalah"
+            >
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
-        <div class="certificate-box reveal">
-          <img src="foto10.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Komdigi</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto11.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Komdigi</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto12.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Kampus Merdeka</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto13.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Data Analyst and Generatif AI</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto14.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat MPK</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto15.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Web Developer</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto16.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat IoT</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto17.jpeg" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Kepanitiaan</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto18.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat Kominfo</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-        <div class="certificate-box reveal">
-          <img src="foto19.png" alt="Sertifikat 4" />
-          <div class="certificate-layer">
-            <h4>Sertifikat IBM</h4>
-            <p>Klik untuk melihat</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Modal/Lightbox untuk Sertifikat (Pastikan ini juga ada sebelum tag </body>) -->
-    <div id="certificateModal" class="modal">
-      <span class="close-modal">&times;</span>
-      <img class="modal-content" id="modalImage" />
+      </section>
+    </main>
+
+    <!-- Modal / Lightbox untuk Tampilan Sertifikat Ukuran Penuh -->
+    <div
+      id="certificateModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Tampilan Sertifikat Ukuran Penuh"
+    >
+      <span
+        class="close-modal"
+        role="button"
+        aria-label="Tutup pratinjau sertifikat"
+        tabindex="0"
+      >&times;</span>
+      <img
+        class="modal-content"
+        id="modalImage"
+        alt="Pratinjau Sertifikat Resmi Ariq Alfalah"
+      />
     </div>
-
-    <!-- Bagian Kontak (Contact) -->
-    <section class="contact" id="contact">
-      <h2 class="heading reveal">Hubungi <span>Saya</span></h2>
-      <div class="contact-content reveal">
-        <p>
-          Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan,
-          jangan ragu untuk menghubungi saya melalui email atau media sosial.
-        </p>
-        <p class="email">
-          <strong>Email:</strong>
-          <a href="mailto:emailanda@example.com">ariqalfalah04@gmail.com</a>
-        </p>
-        <div class="social-media">
-          <a href="www.linkedin.com/in/ariq-alfalah-483477347"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://github.com/Ariq04"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/ariqalflah/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-text">
-        <p>&copy; 2025 oleh Ariq Alfalah | Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 Ariq Alfalah. All rights reserved.</p>
       </div>
       <div class="footer-icon-top">
-        <a href="#home"><i class="fas fa-angle-up"></i></a>
+        <a href="#home" aria-label="Kembali ke atas halaman">
+          <i class="fas fa-angle-up"></i>
+        </a>
       </div>
     </footer>
 
-    <!-- Link ke File JavaScript -->
+    <!-- Script JavaScript Vanilla -->
     <script src="script.js"></script>
   </body>
 </html>

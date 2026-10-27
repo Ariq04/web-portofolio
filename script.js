@@ -5,13 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
 
   menuIcon.onclick = () => {
-    menuIcon.classList.toggle("fa-xmark"); // Mengubah ikon hamburger menjadi X
+    const isExpanded = menuIcon.classList.toggle("fa-xmark"); // Mengubah ikon hamburger menjadi X
     navbar.classList.toggle("active");
+    menuIcon.setAttribute("aria-expanded", isExpanded ? "true" : "false");
   };
 
   // Mengatur link navigasi yang aktif berdasarkan posisi scroll
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("header nav a");
+
+  // Menutup menu mobile saat link navigasi di-klik
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuIcon.classList.remove("fa-xmark");
+      navbar.classList.remove("active");
+      menuIcon.setAttribute("aria-expanded", "false");
+    });
+  });
 
   window.onscroll = () => {
     sections.forEach((sec) => {
@@ -23,10 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (top >= offset && top < offset + height) {
         navLinks.forEach((links) => {
           links.classList.remove("active");
-          document
-            .querySelector("header nav a[href*=" + id + "]")
-            .classList.add("active");
         });
+        const activeLink = document.querySelector("header nav a[href*=" + id + "]");
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
       }
     });
 
@@ -34,20 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".header");
     header.classList.toggle("sticky", window.scrollY > 100);
 
-    // Menutup menu mobile saat link di-klik atau saat scroll
+    // Menutup menu mobile saat scroll
     menuIcon.classList.remove("fa-xmark");
     navbar.classList.remove("active");
+    menuIcon.setAttribute("aria-expanded", "false");
   };
 
   // Efek Typewriter
   const typewriterElement = document.querySelector(".typewriter");
   if (typewriterElement) {
-    const textArray = ["Data Analyst", "Data Science", "Pecinta Teknologi"];
+    const textArray = ["Data Analyst", "Business Intelligence", "AI Solution Developer"];
     let textArrayIndex = 0;
     let charIndex = 0;
-    const typingDelay = 150;
-    const erasingDelay = 100;
-    const newTextDelay = 2000; // Jeda sebelum mengetik teks baru
+    const typingDelay = 120;
+    const erasingDelay = 80;
+    const newTextDelay = 1800; // Jeda sebelum mengetik teks baru
 
     const type = () => {
       if (charIndex < textArray[textArrayIndex].length) {
@@ -86,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const windowHeight = window.innerHeight;
     revealElements.forEach((el) => {
       const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 150; // Jarak dari bawah layar untuk memicu animasi
+      const elementVisible = 50; // Jarak dari bawah layar untuk memicu animasi lebih halus
 
       if (elementTop < windowHeight - elementVisible) {
         el.classList.add("active");
@@ -100,32 +112,69 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
   // Panggil sekali saat load untuk elemen yang sudah terlihat
   revealOnScroll();
-  // --- Logika Modal Sertifikat (BARU) ---
+  // Aksesibilitas keyboard untuk menu hamburger
+  if (menuIcon) {
+    menuIcon.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        menuIcon.click();
+      }
+    });
+  }
+
+  // --- Logika Modal Sertifikat ---
   const modal = document.getElementById("certificateModal");
   const modalImg = document.getElementById("modalImage");
   const certificateBoxes = document.querySelectorAll(".certificate-box");
   const closeModalBtn = document.querySelector(".close-modal");
+  let lastFocusedBox = null;
 
   // Tambahkan event listener untuk setiap kotak sertifikat
   certificateBoxes.forEach((box) => {
     box.onclick = function () {
       const img = this.querySelector("img");
-      modal.style.display = "block"; // Tampilkan modal
-      modalImg.src = img.src; // Atur sumber gambar modal
-      modalImg.alt = img.alt; // Atur teks alt gambar modal
+      if (img && modal && modalImg) {
+        lastFocusedBox = this; // Simpan elemen sebelum modal dibuka
+        modal.style.display = "block"; // Tampilkan modal
+        modalImg.src = img.src; // Atur sumber gambar modal
+        modalImg.alt = img.alt || "Sertifikat Ariq Alfalah"; // Atur teks alt gambar modal
+        document.body.style.overflow = "hidden"; // Kunci scroll latar belakang
+        if (closeModalBtn) {
+          closeModalBtn.focus(); // Fokus ke tombol close
+        }
+      }
     };
+
+    // Dukungan navigasi keyboard (Enter / Spasi)
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.click();
+      }
+    });
   });
 
   // Fungsi untuk menutup modal
   const closeCertificateModal = () => {
     if (modal) {
       modal.style.display = "none"; // Sembunyikan modal
+      document.body.style.overflow = "auto"; // Kembalikan scroll latar belakang
+      if (lastFocusedBox) {
+        lastFocusedBox.focus(); // Kembalikan fokus ke kotak pemicu
+        lastFocusedBox = null;
+      }
     }
   };
 
   // Ketika pengguna mengklik tombol close (x)
   if (closeModalBtn) {
     closeModalBtn.onclick = closeCertificateModal;
+    closeModalBtn.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        closeCertificateModal();
+      }
+    });
   }
 
   // Ketika pengguna mengklik di luar area gambar pada modal
